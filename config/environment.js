@@ -1,6 +1,6 @@
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 
-export const setEnviromentVariables = () => {
+const setEnviromentVariables = () => {
     if (process.env.ENV && process.env.ENV === 'production')  {
             dotenv.config({
                 path: './config/production.env',
@@ -11,5 +11,6 @@ export const setEnviromentVariables = () => {
         });
     }
 };
-
-setEnviromentVariables();
+module.exports = {
+    setEnviromentVariables
+}
