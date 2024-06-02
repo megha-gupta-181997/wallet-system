@@ -19,7 +19,7 @@ router.post('/setup', validateWalletInitializePayload, async (req, res, next) =>
 router.post('/transact/:walletId', validateCreditDebitWalletParam, validateCreditDebitWalletPayload, async (req, res, next) => {
     try {
         const response = await creditDebitWallet(req.body, req.params.walletId);
-        return res.status(201).send(helper.sendSuccessResponse(response));
+        return res.status(200).send(helper.sendSuccessResponse(response));
     } catch (error) {
         error.filename = 'routes.js';
         error.func = 'router.creditDebitWallet';
@@ -30,7 +30,7 @@ router.post('/transact/:walletId', validateCreditDebitWalletParam, validateCredi
 router.get('/wallet/:id', validateGetWallet, async (req, res, next) => {
     try {
         const response = await getWallet(req.params.id);
-        return res.status(201).send(helper.sendSuccessResponse(response));
+        return res.status(200).send(helper.sendSuccessResponse(response));
     } catch (error) {
         error.filename = 'routes.js';
         error.func = 'router.getWallet';
@@ -41,7 +41,7 @@ router.get('/wallet/:id', validateGetWallet, async (req, res, next) => {
 router.get('/transactions', validateGetTransactions, async (req, res, next) => {
     try {
         const response = await getTransactions(req.query);
-        return res.status(201).send(helper.sendSuccessResponse(response));
+        return res.status(200).send(helper.sendSuccessResponse(response));
     } catch (error) {
         error.filename = 'routes.js';
         error.func = 'router.getWallet';
