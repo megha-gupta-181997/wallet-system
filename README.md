@@ -9,9 +9,12 @@ Following are the steps to get started with the service up and running.
 * Nodejs
 * MongoDB
 
-### Database Schema
+### Database
+Mongodb is used to store the data, as it gives schema flexibilty and we are using indexes for data retrieval.
+We have 2 Collections, as Wallet and transactions, transactions is linked with walletId to fetch transaction on the basis of wallet Id.
 
-![alt text](https://drive.google.com/file/d/1m1p3hbOIHhu-4Hd76Mj8oJiVmrHRR8PS/view?usp=sharing)
+For Schema Design: https://drive.google.com/file/d/1m1p3hbOIHhu-4Hd76Mj8oJiVmrHRR8PS/view?usp=sharing
+
 
 ### Installing
 Clone the project
