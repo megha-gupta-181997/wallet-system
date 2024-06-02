@@ -46,24 +46,3 @@ const start = async () => {
 };
 
 start()
-
-
-
-// collection: 
-// wallet {
-//     id: sytem generated
-//     balance: decimal upto 4
-//     name: string
-
-// }
-
-// transaction {
-//     id: system generated
-//     walletId: string
-//     amount: decimal upto 4
-//     balance: decimal upto 4
-//     description: text
-//     type: "CREDIT"/"DEBIT"
-//     timestamp: date
-
-// }

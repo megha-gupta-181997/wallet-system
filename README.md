@@ -9,6 +9,10 @@ Following are the steps to get started with the service up and running.
 * Nodejs
 * MongoDB
 
+### Database Schema
+
+![alt text](https://drive.google.com/file/d/1m1p3hbOIHhu-4Hd76Mj8oJiVmrHRR8PS/view?usp=sharing)
+
 ### Installing
 Clone the project
 username: megha-gupta-181997
