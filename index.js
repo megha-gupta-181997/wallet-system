@@ -13,7 +13,7 @@ setEnviromentVariables();
 const port = process.env.PORT;
 
 app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`);
+  console.log(`Server listening at http://0.0.0.0:${port}`);
 });
 
 const addMiddlewares = () => {
