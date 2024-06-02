@@ -11,7 +11,9 @@ Following are the steps to get started with the service up and running.
 
 ### Database
 Mongodb is used to store the data, as it gives schema flexibilty and we are using indexes for data retrieval.
+Mongodb is a better choice for heavy writes.
 We have 2 Collections, as Wallet and transactions, transactions is linked with walletId to fetch transaction on the basis of wallet Id.
+Used Session Transaction for race conditions
 
 For Schema Design: https://drive.google.com/file/d/1m1p3hbOIHhu-4Hd76Mj8oJiVmrHRR8PS/view?usp=sharing
 
@@ -148,3 +150,7 @@ Response: {
     "error": ""
 }
 ```
+
+### Demo: Loom Vedio
+https://www.loom.com/share/cf472e0a93dd4ca69533eae14f76d9c3
+https://www.loom.com/share/41c8dd8bcf2846da9ec072e180821483
