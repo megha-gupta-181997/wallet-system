@@ -30,6 +30,7 @@ http://34.131.74.77:4000/
 Health Route: http://34.131.74.77:4000/health
 
 # API's
+You can find postman collection in the repo.
 
 ### Initialize Wallet
 

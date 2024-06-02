@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "803a521c-d5ef-46c5-9b78-9b73107b7d76",
+		"name": "Wallet System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18595240"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/health",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Initialize Wallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Wallet-er\",\n    \"balance\":100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/setup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"setup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Credit Debit Wallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": -10020.9190,\n    \"description\": \"Recharge\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/transact/665c3a284d7d2085a9254a76",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"transact",
+						"665c3a284d7d2085a9254a76"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Wallet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/wallet/665a251b656b9113d90fe4ae",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"wallet",
+						"665a251b656b9113d90fe4ae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/transactions?walletId=665a251b656b9113d90fe4ae&skip=0&limit=10",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "walletId",
+							"value": "665a251b656b9113d90fe4ae"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
