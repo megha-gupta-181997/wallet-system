@@ -42,7 +42,7 @@ const creditDebitWallet = async (payload, walletId) => {
         throw new ClientError(400, 'Wallet does not exist');
     }
 
-    wallet.balance = parseFloat(wallet.balance) + payload.amount
+    wallet.balance = (parseFloat(wallet.balance) + payload.amount).toFixed(4)
     await wallet.save({ session })
 
     let type = ""

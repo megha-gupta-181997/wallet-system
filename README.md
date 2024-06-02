@@ -5,7 +5,7 @@ This service Initialize the wallet and allows credit and debit transaction.
 ## Getting Started
 Following are the steps to get started with the service up and running.
 
-### Prerequisites
+### Pre requisites
 * Nodejs
 * MongoDB
 
@@ -27,7 +27,7 @@ Health Route: http://34.131.74.77:4000/health
 ### Initialize Wallet
 
 ```
-Methid: POST
+Method: POST
 Endpoint: /setup
 Payload: {
     "name": "Wallet-r2",
@@ -58,7 +58,7 @@ Response: {
 ### Credit/Debit Wallet
 
 ```
-Methid: POST
+Method: POST
 Endpoint: /transact/:walletId
 Payload: {
     "amount": 2.90, // for debit, add minus 
@@ -86,7 +86,7 @@ Response: {
 ### Get Wallet
 
 ```
-Methid: GET
+Method: GET
 Endpoint: /wallet/:walletId
 
 Response: 200 Ok
@@ -111,7 +111,7 @@ Response: {
 ### Get Transactions
 
 ```
-Methid: GET
+Method: GET
 Endpoint: /transactions?walletId=665a251b656b9113d90fe4ae&skip=0&limit=10
 
 Response: 200 Ok
