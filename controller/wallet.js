@@ -43,6 +43,11 @@ const creditDebitWallet = async (payload, walletId) => {
     }
 
     wallet.balance = (parseFloat(wallet.balance) + payload.amount).toFixed(4)
+
+    if (wallet.balance < 0) {
+        throw new ClientError(400, 'Wallet balance cannot be zero');
+    }
+
     await wallet.save({ session })
 
     let type = ""

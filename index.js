@@ -12,8 +12,9 @@ setEnviromentVariables();
 
 const port = process.env.PORT;
 
+
 app.listen(port, () => {
-  console.log(`Server listening at http://0.0.0.0:${port}`);
+  console.log(`Server listening at http://${process.env.HOST}:${port}`);
 });
 
 const addMiddlewares = () => {
@@ -46,3 +47,4 @@ const start = async () => {
 };
 
 start()
+module.exports = app

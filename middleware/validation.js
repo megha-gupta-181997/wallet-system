@@ -3,7 +3,7 @@ const helper = require('../lib/helper')
 
 const validateWalletInitializePayload = async (req, res, next) => {
     const JoiSchema = Joi.object({
-        balance: Joi.number()
+        balance: Joi.number().min(1)
             .precision(4).prefs({ convert: false })
             .required(),
         name: Joi.string()
